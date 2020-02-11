@@ -20,7 +20,7 @@ semaphore.acquire()
 logging.info('quedan 0')
 
 # Acá el programa se bloquea, porque el semáforo ya estaba en 0
-semaphore.acquire()
+#semaphore.acquire()
 logging.info('esto no se imprime nunca jamás')
 
 # Para salir, apretar Ctrl + C o cerrar la consola
