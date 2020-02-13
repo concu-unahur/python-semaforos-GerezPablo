@@ -17,12 +17,15 @@ class Cocinero(threading.Thread):
     
     chefLock.acquire()
     while (True):
+      chefLock.acquire()
       try:
         logging.info('Reponiendo los platos...')
         platosDisponibles = 3
       finally:
-        chefLock.acquire()
         sema.release()
+        #chefLock.acquire()
+
+        
 
 class Comensal(threading.Thread):
   def __init__(self, numero):
